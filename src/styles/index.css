@@ -31,5 +31,16 @@
     @apply opacity-100;
   }
 
+  @font-face {
+    font-family: "Raiders";
+    src: local("Raiders"),
+     url(/fonts/raidercrusaderstraight.ttf) format("truetype");
+     font-weight: normal;
+  font-style: normal;
+   }
+
+   .font-face-gm {
+    font-family: "Raiders";
+  }
 
 }

@@ -1,25 +1,82 @@
+"use client"
 import Link from "next/link";
+import { useEffect } from "react";
+import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Hero = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const backgroundElement = document.getElementById("background-slide");
+      if (backgroundElement) {
+        backgroundElement.style.backgroundSize  = `${100+ scrollPosition * .1}%`; // Adjust multiplier for speed
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[180px] dark:bg-gray-dark md:pb-[100px] md:pt-[210px] xl:pb-[140px] xl:pt-[240px] 2xl:pb-[180px] 2xl:pt-[270px]"
+        // style={{
+        //   backgroundImage: ` url(/3d-white.jpg)`,
+        //   width: '100%',
+        //   height: '100%',
+        // }}        
+       
+        className="relative z-10 overflow-hidden  pb-16 pt-[200px]  md:pb-[170px] md:pt-[280px] xl:pb-[210px] xl:pt-[310px] 2xl:pb-[300px] 2xl:pt-[400px]"
       >   
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-2xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-4xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
-                </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+        <div 
+                id="background-slide"
+                className="absolute w-full h-screen inset-0 bg-[url(/3d-white.jpg)] dark:bg-[url(/6026986.jpg)] bg-cover  bg-center bg-no-repeat transition-all duration-300">
+
+   <div className="absolute inset-0 bg-white/70 dark:bg-black/70"></div>
+</div>
+
+        <div className="container " >
+          <div className="-mx-4 flex flex-wrap ">
+            <div className="w-full px-4 z-10 ">
+              <div className="mx-left max-w-[800px] text-left space-y-4">
+              <div className="mb-5 text-8xl	 font-custom text-black  dark:text-white sm:text-3xl sm:leading-tight md:text-4xl ">
+                <div className="text-8xl	 font-face-gm  text-black dark:text-white sm:text-3xl sm:leading-tight md:text-6xl justify-left">
+              ARE YOU  </div>
+              <div className="font-face-gm  text-primary text-8xl flex space-x-3 ">
+            <strong className="mb-5 mt-6 text-8xl sm:text-3xl sm:leading-tight md:text-6xl justify-left">
+               <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Individual ?',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'Small Scale Buisness ?',
+        1000,
+        'Start Up ?',
+        1000,
+        'Enterprise ?',
+        1000
+      ]}
+      wrapper="div"
+      speed={50}
+      // style={{ fontSize: '1rem', display: 'inline-block' }}
+      repeat={Infinity}
+    />
+            </strong>
+          </div>
+          <div className="mb-5 text-8xl font-face-gm   text-black dark:text-white sm:text-3xl sm:leading-tight md:text-6xl "       
+          >
+              MAKE US YOUR PARTNER </div>
+                </div>
+                <p className="mb-12 mr-10 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  Lets collobrate to take your
                 </p>
+                
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
@@ -36,13 +93,30 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+            {/* <aside className="absolute top-50 right-40  bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg w-1/4 max-w-sm sm:max-w-sm md:max-w-md  ">
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  </div>
+                  <p className="text-sm">bash</p>
+                </div>
+                <div className="mt-4">
+                  <p className="text-primary">$npm install tailwindcss</p>
+                  <p className="text-white dark:text-black">+ tailwindcss@2.2.16</p>
+                  <p className="text-white dark:text-black">added 1 package, and audited 2 packages in 3s</p>
+                  <p className="text-primary">$</p>
+                </div>
+            </aside> */}
           </div>
+
         </div>
 
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
-            width="450"
-            height="556"
+            width="1000"
+            height="1000"
             viewBox="0 0 450 556"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -180,48 +254,41 @@ const Hero = () => {
 
         <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
-            width="364"
-            height="201"
+            width="400"
+            height="400"
             viewBox="0 0 364 201"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-              stroke="url(#paint0_linear_25:218)"
-            />
-            <path
-              d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
+            <circle
+              opacity="0.8"
+              cx="200.505"
+              cy="220.5054"
+              r="150.7205"
+              transform="rotate(-10.421 214.505 60.5054)"
               stroke="url(#paint1_linear_25:218)"
-            />
-            <path
-              d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-              stroke="url(#paint2_linear_25:218)"
-            />
-            <path
-              d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-              stroke="url(#paint3_linear_25:218)"
             />
             <circle
               opacity="0.8"
-              cx="214.505"
-              cy="60.5054"
-              r="49.7205"
-              transform="rotate(-13.421 214.505 60.5054)"
-              stroke="url(#paint4_linear_25:218)"
+              cx="100.505"
+              cy="170.5054"
+              r="200.7205"
+              transform="rotate(13.421 214.505 60.5054)"
+              stroke="url(#paint2_linear_25:218)"
             />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
+            <circle cx="200" cy="250" r="150" fill="url(#paint0_linear_25:218)" />
+            <circle cx="100" cy="150" r="200" fill="url(#paint0_linear_25:218)" />
             <defs>
-              <linearGradient
+            <linearGradient
                 id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
+                x1="-54.5003"
+                y1="-178"
+                x2="222"
+                y2="288"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#008bfb" stopOpacity="0" />
-                <stop offset="1" stopColor="#008bfb" />
+                <stop stopColor="#008bfb" />
+                <stop offset="1" stopColor="#008bfb" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_25:218"
@@ -275,12 +342,13 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(220 63) rotate(90) scale(43)"
               >
-                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                <stop offset="1" stopColor="white" stopOpacity="0.08" />
+                <stop offset="0.145833" stopColor="#008bfb" stopOpacity="0" />
+                <stop offset="1" stopColor="#008bfb" stopOpacity="0.08" />
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
+
       </section>
       
     </>
