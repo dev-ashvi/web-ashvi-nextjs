@@ -34,15 +34,16 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      
       colors: {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#121723",
+        black: "#091d34",
         dark: "#1D2430",
-        primary: "#4A6CF7",
+        primary: "#008bfb",
         yellow: "#FBB040",
-        "bg-color-dark": "#171C28",
+        "bg-color-dark": "#091d34",
         "body-color": {
           DEFAULT: "#788293",
           dark: "#959CB1",
@@ -53,10 +54,15 @@ module.exports = {
         },
         gray: {
           ...colors.gray,
-          dark: "#1E232E",
+          dark: "#091d34",
           light: "#F0F2F9",
         },
       },
+      fontFamily: {
+        custom: ['Raiders', 'sans-serif'],
+      },
+
+      
 
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
@@ -74,6 +80,16 @@ module.exports = {
       },
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
+      },
+      keyframes: {
+        slide: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        slide: 'slide 10s ease-in-out infinite',
       },
     },
   },
