@@ -52,6 +52,7 @@ const Brands = () => {
         items={testimonials}
         direction="right"
         speed="slow"
+        className ="partners"
       />
     </div>    
     </section>
