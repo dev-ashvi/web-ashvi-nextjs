@@ -34,8 +34,8 @@
   @font-face {
     font-family: "Raiders";
     src: local("Raiders"),
-     url(/fonts/raidercrusaderstraight.ttf) format("truetype");
-     font-weight: normal;
+     url(/fonts/norwester.otf) format("truetype");
+     font-weight: "900";
   font-style: normal;
    }
 

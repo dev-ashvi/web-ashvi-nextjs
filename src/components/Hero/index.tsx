@@ -3,6 +3,66 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Typical from 'react-typical';
 import { TypeAnimation } from 'react-type-animation';
+import {IconCloud} from "@/components/Hero/cloudProps";
+
+ 
+const slugs = [
+  "typescript",
+  "javascript",
+  "tailwindcss",
+  "wix",
+  "azure",
+  "aws",
+  "spring",
+  "elasticsearch",
+  "apachekafka",
+  "googlecloud",
+  "snowflake",
+  "go",
+  "java",
+  "apachehadoop",
+  "python",
+  "scala",
+  "react",
+  "flutter",
+  "apachehive",
+  "databricks",
+  "prometheus",
+  "databricks",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "dbt",
+  "kubernetes",
+  "nextdotjs",
+  "huggingface",
+  "amazonaws",
+  "terraform",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "pytorch",
+  "uipath",
+  "tensorflow",
+  "keras",
+  "claude",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "intellijidea",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+  "apachespark",
+  "apacheairflow",
+  
+];
 
 
 const Hero = () => {
@@ -32,17 +92,17 @@ const Hero = () => {
         //   height: '100%',
         // }}        
        
-        className="relative z-10 overflow-hidden  pb-16 pt-[200px]  md:pb-[170px] md:pt-[280px] xl:pb-[210px] xl:pt-[310px] 2xl:pb-[300px] 2xl:pt-[400px]"
+        className="relative z-10 overflow-hidden  pb-16 pt-[220px]  md:pb-[240px] md:pt-[340px] xl:pb-[280px] xl:pt-[420px] 2xl:pb-[450px] 2xl:pt-[500px]"
       >   
         <div 
                 id="background-slide"
                 className="absolute w-full h-screen inset-0 bg-[url(/3d-white.jpg)] dark:bg-[url(/6026986.jpg)] bg-cover  bg-center bg-no-repeat transition-all duration-300">
 
-   <div className="absolute inset-0 bg-white/70 dark:bg-black/70"></div>
+   <div className="absolute inset-0 bg-white/50 dark:bg-black/90"></div>
 </div>
 
         <div className="container " >
-          <div className="-mx-4 flex flex-wrap ">
+          <div className="-mx-4 -my-12 flex flex-wrap ">
             <div className="w-full px-4 z-10 ">
               <div className="mx-left max-w-[800px] text-left space-y-4">
               <div className="mb-5 text-8xl	 font-custom text-black  dark:text-white sm:text-3xl sm:leading-tight md:text-4xl ">
@@ -53,13 +113,13 @@ const Hero = () => {
                <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'Individual ?',
+        'AN INDIVIDUAL ?',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Small Scale Buisness ?',
+        'A SMALL SCALE BUSINESS ?',
         1000,
-        'Start Up ?',
+        'A START UP ?',
         1000,
-        'Enterprise ?',
+        'AN ENTERPRISE ?',
         1000
       ]}
       wrapper="div"
@@ -71,9 +131,9 @@ const Hero = () => {
           </div>
           <div className="mb-5 text-8xl font-face-gm   text-black dark:text-white sm:text-3xl sm:leading-tight md:text-6xl "       
           >
-              MAKE US YOUR PARTNER </div>
+              MAKE US YOUR TECH PARTNER </div>
                 </div>
-                <p className="mb-12 mr-10 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                {/* <p className="mb-12 mr-10 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Lets collobrate to take your
                 </p>
                 
@@ -90,25 +150,13 @@ const Hero = () => {
                   >
                     Star on GitHub
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
-            {/* <aside className="absolute top-50 right-40  bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg w-1/4 max-w-sm sm:max-w-sm md:max-w-md  ">
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  </div>
-                  <p className="text-sm">bash</p>
-                </div>
-                <div className="mt-4">
-                  <p className="text-primary">$npm install tailwindcss</p>
-                  <p className="text-white dark:text-black">+ tailwindcss@2.2.16</p>
-                  <p className="text-white dark:text-black">added 1 package, and audited 2 packages in 3s</p>
-                  <p className="text-primary">$</p>
-                </div>
-            </aside> */}
+            <div className="absolute right-[-600px] top-20 size-full max-w-7xl items-center justify-center overflow-hidden rounded-lg   px-0 pb-0 pt-0 ">
+      <IconCloud iconSlugs={slugs} />
+    </div>
+
           </div>
 
         </div>
