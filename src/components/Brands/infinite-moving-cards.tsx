@@ -24,12 +24,9 @@ export const InfiniteMovingCards = ({
       scrollerContent.forEach((item) => {
         if (item instanceof Element) {
         const duplicatedItem = item.cloneNode(true);
-        }
+        scrollerRef.current.appendChild(duplicatedItem);
 
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        
-      }
+        }
       });
 
       getDirection();
