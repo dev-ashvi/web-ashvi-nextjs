@@ -22,13 +22,13 @@ export const InfiniteMovingCards = ({
       const scrollerContent = Array.from(scrollerRef.current.children);
 
       scrollerContent.forEach((item) => {
-        /** @type {HTMLElement} */
+        if (item instanceof Element) {
         const duplicatedItem = item.cloneNode(true);
-        if (clone instanceof HTMLElement) {
+        }
 
         if (scrollerRef.current) {
           scrollerRef.current.appendChild(duplicatedItem);
-        }
+        
       }
       });
 
