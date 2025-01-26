@@ -98,6 +98,8 @@ interface CardItemProps extends HTMLAttributes<HTMLElement> {
   rotateX?: number;
   rotateY?: number;
   rotateZ?: number;
+  href?: string; // Add this line
+
 }
 
 export const CardItem: React.FC<CardItemProps> = ({
@@ -110,6 +112,7 @@ export const CardItem: React.FC<CardItemProps> = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
+  href, // Include href
   ...rest
 }) => {
   const ref = useRef<HTMLElement>(null);
@@ -127,6 +130,19 @@ export const CardItem: React.FC<CardItemProps> = ({
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
   };
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        ref={ref as React.Ref<HTMLAnchorElement>}
+        className={cn("w-fit transition duration-200 ease-linear", className)}
+        {...rest}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <Tag
