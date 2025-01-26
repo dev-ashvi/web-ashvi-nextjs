@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import "../../styles/partnercard.css";
-import { cn } from "@/lib/utils";
 import React from "react";
 import Meteors from "@/components/About/Metors";
 import "../../styles/3dcircles.css";
@@ -68,9 +67,9 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
               <div className="absolute inset-0 h-full w-full  transform scale-[0.80] rounded-full blur-3xl" />
-                  <div class="loader">
-                    <div class="box">
-                      <div class="logo">
+                  <div className="loader">
+                    <div className="box">
+                      <div className="logo">
                                 <Image
                           src="/hinduist-yoga-position-svgrepo-com_1.svg"
                           height="10"
@@ -80,10 +79,10 @@ const AboutSectionOne = () => {
                         />
                       </div>
                     </div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
                   </div>
               </div>
             </div>

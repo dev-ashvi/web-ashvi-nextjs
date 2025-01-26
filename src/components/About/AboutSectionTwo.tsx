@@ -1,6 +1,5 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
-import { cn } from "@/lib/utils";
 import "../../styles/3dcircles.css";
 
 const checkIcon = (
@@ -27,9 +26,9 @@ const AboutSectionTwo = () => {
               className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-            <div class="loader">
-                    <div class="box">
-                      <div class="logo">
+            <div className="loader">
+                    <div className="box">
+                      <div className="logo">
                                 <Image
                           src="/hinduist-yoga-position-svgrepo-com.svg"
                           height="10"
@@ -39,10 +38,10 @@ const AboutSectionTwo = () => {
                         />
                       </div>
                     </div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
+                    <div className="box"></div>
                   </div>
             </div>
           </div>
