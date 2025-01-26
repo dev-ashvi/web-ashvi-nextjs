@@ -85,7 +85,7 @@ export const InfiniteMovingCards = ({
             >
               {item.description}
             </CardItem>
-            <CardItem translateZ="100" className="w-full mt-4">
+            <CardItem translateZ={100} className="w-full mt-4">
               <Image
                 src={item.image}
                 height="10"
