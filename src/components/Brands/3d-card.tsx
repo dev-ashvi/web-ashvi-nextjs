@@ -92,12 +92,12 @@ interface CardItemProps extends HTMLAttributes<HTMLElement> {
   as?: React.ElementType;
   children: ReactNode;
   className?: string;
-  translateX?: string;
-  translateY?: string;
-  translateZ?: string;
-  rotateX?: string;
-  rotateY?: string;
-  rotateZ?: string;
+  translateX?: number;
+  translateY?: number;
+  translateZ?: number;
+  rotateX?: number;
+  rotateY?: number;
+  rotateZ?: number;
 }
 
 export const CardItem: React.FC<CardItemProps> = ({
