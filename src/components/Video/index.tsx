@@ -17,7 +17,7 @@ const Video = () => {
     <section className="relative  py-16 md:py-20 lg:py-28">
 
 
-      <div className="container">
+      <div className="container mx-auto">
         <SectionTitle
           title="We Are Ready to Help"
           paragraph="We can help You and Your Business Enable the Power of Technology."
@@ -62,7 +62,7 @@ const Video = () => {
                           </div>
                           <div className="view-more">
                               <button className="view-more-button">View more</button>
-                              <svg className="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                              <svg className="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
                           </div>
                       </div>
                       

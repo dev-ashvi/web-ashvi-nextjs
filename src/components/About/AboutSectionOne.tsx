@@ -1,7 +1,10 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import "../../styles/partnercard.css";
-
+import { cn } from "@/lib/utils";
+import React from "react";
+import Meteors from "@/components/About/Metors";
+import "../../styles/3dcircles.css";
 
 
 const checkIcon = (
@@ -22,48 +25,23 @@ const AboutSectionOne = () => {
 
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+
+<SectionTitle
+          title="Our Products"
+          paragraph="Coming Soon 2 AI models"
+          center
+          mb="25px"
+        />
       
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
+                title="Ved Vyas"
                 paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
                 mb="44px"
               />
-              <div className="card1">
-              
-  <div className="card1__content">
-    <p className="card1__title">Card Title
-    </p><p className="card1__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
-
-<div className="card1">
-  <div className="card1__img">
-    <Image
-      src="./jobsmato.svg"
-      width={500}
-      height={500}
-      alt="Logo 02"
-    />
-  </div>
-  <div className="card1__subtitle">Type of work</div>
-  <div className="card1__wrapper">
-    <div className="card1__title">Project name</div>
-    <div className="card1__icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-        <g>
-          <circle cx="128" cy="128" r="96" opacity="0.2"></circle>
-          <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"></circle>
-          <polyline points="134.1 161.9 168 128 134.1 94.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-          <line x1="88" y1="128" x2="168" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-        </g>
-      </svg>
-    </div>
-  </div>
-</div>
 
               <div
                 className="mb-12 max-w-[570px] lg:mb-0"
@@ -89,18 +67,24 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+              <div className="absolute inset-0 h-full w-full  transform scale-[0.80] rounded-full blur-3xl" />
+                  <div class="loader">
+                    <div class="box">
+                      <div class="logo">
+                                <Image
+                          src="/hinduist-yoga-position-svgrepo-com_1.svg"
+                          height="10"
+                          width="10"
+                          className="h-13 w-full  object-cover rounded-xl group-hover/card:shadow-xl"
+                          alt="thumbnail"
+                        />
+                      </div>
+                    </div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                  </div>
               </div>
             </div>
           </div>
@@ -111,3 +95,6 @@ const AboutSectionOne = () => {
 };
 
 export default AboutSectionOne;
+
+
+

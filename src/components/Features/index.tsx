@@ -85,19 +85,19 @@ const Features = () => {
 
   return (
     <>
-      <section id="features" className="py-16 sm:py-10 md:py-20 lg:py-28">
+      <section id="features" className="py-8 sm:py-10 md:py-20 lg:py-28">
      
-        <div className="container">
+        <div className="container mx-auto">
           <SectionTitle
             title="End to End Tech Support"
             paragraph="We help you build from Front of your Business to End."
             center
           />
-      <div className="relative bottom-40 py-10 sm:py-20 md:py-20 lg:py-28 ">
+      <div className="mt-6 ">
         
       <BusinessCategories allTabs={allTabs} currentIndex={currentIndex}/>
 
-      <div className="relative bottom-40  left-80 mx-28 py-16 lg:left-50   md:py-20 lg:py-28 ">
+      <div className="relative mt-6 bottom-40  left-80 mx-28 py-16 lg:left-50   md:py-20 lg:py-28 ">
       <SlidingTabBar  allTabs={allTabs} setCurrentIndex={setCurrentIndex}/>
     </div>
     </div>
