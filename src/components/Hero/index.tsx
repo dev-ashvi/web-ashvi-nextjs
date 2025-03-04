@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Typical from 'react-typical';
 import { TypeAnimation } from 'react-type-animation';
 import {IconCloud} from "@/components/Hero/cloudProps";
+import Spline from '@splinetool/react-spline/next';
 
  
 const slugs = [
@@ -98,12 +99,14 @@ const Hero = () => {
                 id="background-slide"
                 className="absolute w-full h-screen inset-0 bg-[url(/3d-white.jpg)] dark:bg-[url(/6026986.jpg)] bg-cover  bg-center bg-no-repeat transition-all duration-300">
 
-   <div className="absolute inset-0 bg-white/50 dark:bg-black/90"></div>
+   <div className="absolute inset-0 bg-white/80 dark:bg-black/90"></div>
 </div>
-
         <div className="container " >
+
           <div className="-mx-4 -my-12 flex flex-wrap ">
+          
             <div className="w-full px-4 z-10 ">
+
               <div className="mx-left max-w-[800px] text-left space-y-4">
               <div className="mb-5 text-8xl	 font-custom text-black  dark:text-white sm:text-3xl sm:leading-tight md:text-4xl ">
                 <div className="text-8xl	 font-face-gm  text-black dark:text-white sm:text-3xl sm:leading-tight md:text-6xl justify-left">
@@ -153,9 +156,28 @@ const Hero = () => {
                 </div> */}
               </div>
             </div>
-            <div className="absolute right-[-600px] top-20 size-full max-w-7xl items-center justify-center overflow-hidden rounded-lg   px-0 pb-0 pt-0 ">
+            <div className="absolute right-[240px] top-[220px] size-full max-w-xl items-center justify-center overflow-hidden rounded-lg   px-0 pb-100 pt-0 z-30">
+
       <IconCloud iconSlugs={slugs} />
+     
     </div>
+    <div className="absolute right-[-100px] top-[10px] size-full max-w-7xl items-center justify-center overflow-hidden rounded-lg   px-0 pb-0 pt-0 z-40 dark:hidden ">
+
+    <Spline
+                scene="https://prod.spline.design/7MWj34DfQiVIVogv/scene.splinecode" 
+
+      />
+</div>
+<div className="absolute right-[-100px]  top-[10px] size-full max-w-7xl items-center justify-center overflow-hidden rounded-lg   px-0 pb-0 pt-0 z-40  hidden dark:block">
+
+<Spline
+        scene="https://prod.spline.design/eNJqq9guXgyjCCet/scene.splinecode" 
+        />
+
+
+
+</div>
+
 
           </div>
 

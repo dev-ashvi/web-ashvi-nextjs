@@ -9,6 +9,7 @@ import {
   renderSimpleIcon,
   SimpleIcon,
 } from "react-icon-cloud";
+import Spline from '@splinetool/react-spline/next';
 
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
@@ -23,7 +24,7 @@ export const cloudProps: Omit<ICloud, "children"> = {
   options: {
     reverse: true,
     depth: 1,
-    wheelZoom: false,
+    wheelZoom: true,
     imageScale: 2,
     activeCursor: "default",
     tooltip: "native",
@@ -89,5 +90,6 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
+     
   );
 }
